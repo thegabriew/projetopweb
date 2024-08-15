@@ -1,0 +1,18 @@
+create table estudante(
+id int primary key auto_increment,
+nome varchar (100)
+);
+
+create table autor(
+
+id int primary key auto_increment,
+nome varchar (100),
+nacionalidade varchar (3)
+);
+
+create table livro(
+
+titulo varchar (100),
+ano int,
+id int primary key auto_increment,
+idAutor int, foreign key (idAutor) references autor(id) ON DELETE CASCADE);
