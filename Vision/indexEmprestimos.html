@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/formCadastro.css">
     <title>Biblioteca | Empréstimos</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
                 </form>
             </div>
             <div id="img-book">
-                <img src="./svg/Bibliophile-bro.svg" alt="Empréstimos">
+                <img src="./svg/Bibliophile-bro.svg" alt="Empréstimos" draggable="false">
                 <p>
                     Nenhum empréstimo cadastrado
                 </p>
@@ -48,13 +49,39 @@
                 <div class="description-text">
                     <h2>Gerenciar empréstimos</h2>
                     <p>
-                        Gerencie os empréstimos que estão cadastrados, podendo adicionar, <br> editar e removê-los da lista.
+                        Gerencie os empréstimos que estão cadastrados, podendo adicionar, <br> 
+                        editar e removê-los da lista.
                     </p>
                 </div>
                 <form>
                     <input type="submit" id="add_book" value="Adicionar Empréstimo">
                 </form>
             </div>
+            <dialog id="modal">
+                <h1>Cadastro de Empréstimos</h1>
+                <p>
+                    Cadastre de forma rápida empréstimos, adicionando seu ID, selecionar o livro e seu respectivo aluno.
+                </p>
+
+                <form method="POST" action="">
+                    <label for="id">ID:</label>
+                    <input placeholder="ID" type="number" id="id" name="id" required min="0">
+
+                    <label for="titulo">Título:</label>
+                    <input placeholder="Título" type="text" id="titulo" name="titulo" required>
+
+                    <label for="nome">Nome:</label>
+                    <input placeholder="Nome" type="text" id="nome" name="nome" required>
+                                        
+                    <!-- <label for="ano">Ano de Publicação:</label>
+                    <input placeholder="Ano de Publicação" type="date" id="ano" name="ano" required> -->
+                    
+                    <div class="btn">
+                        <input type="submit" value="Cadastrar">
+                        <input type="reset" value="Limpar">
+                    </div>
+                </form>
+            </dialog>
         </section>
         
     </main>
@@ -64,5 +91,7 @@
         <p>Nickolas Davi Vieira Lima (Front-End)</p>
         <p>Raimundo Gabriel Pereira Ferreira (Back-End)</p>
     </footer>
+
+    <script src="./js/formCadastro.js"></script>
 </body>
 </html>

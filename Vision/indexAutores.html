@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/formCadastro.css">
     <title>Biblioteca | Autores</title>
 </head>
 <body>
@@ -35,7 +36,7 @@
                 </form>
             </div>
             <div id="img-book">
-                <img src="./svg/Novelist writing-bro.svg" alt="Autores">
+                <img src="./svg/Novelist writing-bro.svg" alt="Autores" draggable="false">
                 <p>
                     Nenhum autor cadastrado
                 </p>
@@ -54,6 +55,29 @@
                     <input type="submit" id="add_book" value="Adicionar Autor">
                 </form>
             </div>
+            <dialog id="modal">
+                <h1>Cadastro de Autores</h1>
+                <p>Cadastre de forma rápida autores, seus ID, nomes e suas nacionalidades.</p>
+
+                <form method="POST" action="">
+                    <label for="id">ID:</label>
+                    <input placeholder="ID" type="number" id="id" name="id" required min="0">
+
+                    <label for="nome">Nome:</label>
+                    <input placeholder="Nome" type="text" id="nome" name="nome" required>
+                    
+                    <label for="nacionalidade">Nacionalidades:</label>
+                    <input placeholder="Nacionalidade" type="text" id="nacionalidade" name="nacionalidade" required>
+                    
+                    <!-- <label for="ano">Ano de Publicação:</label>
+                    <input placeholder="Ano de Publicação" type="date" id="ano" name="ano" required> -->
+                    
+                    <div class="btn">
+                        <input type="submit" value="Cadastrar">
+                        <input type="reset" value="Limpar">
+                    </div>
+                </form>
+            </dialog>
         </section>
         
     </main>
@@ -63,5 +87,7 @@
         <p>Nickolas Davi Vieira Lima (Front-End)</p>
         <p>Raimundo Gabriel Pereira Ferreira (Back-End)</p>
     </footer>
+
+    <script src="./js/formCadastro.js"></script>
 </body>
 </html>
