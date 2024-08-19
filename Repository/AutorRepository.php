@@ -25,14 +25,14 @@ class AutorRepository {
             if ($stmt === false) {
                 die('Erro na preparação da consulta: ' . $conn->error);
             }
-            $stmt->bind_param("ssi", $autor->getNome(), $autor->getNacionalidade(), $autor->getId());
+            $stmt->bind_param("ssi", $nome, $nacionalidade, $id);
         } else {
             $sql = "INSERT INTO autor (nome, nacionalidade) VALUES (?, ?)";
             $stmt = $conn->prepare($sql);
             if ($stmt === false) {
                 die('Erro na preparação da consulta: ' . $conn->error);
             }
-            $stmt->bind_param("ss", $autor->getNome(), $autor->getNacionalidade());
+            $stmt->bind_param("ss", $nome, $nacionalidade);
         }
 
         $stmt->execute();

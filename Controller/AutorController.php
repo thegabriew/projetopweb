@@ -3,7 +3,7 @@ namespace Controller;
 
 include_once '../Model/Autor.php';
 include_once '../Repository/AutorRepository.php';
-require_once '../db/Database.php';
+require_once '../db/Conexao.php';
 
 use Model\Autor;
 use Repository\AutorRepository;

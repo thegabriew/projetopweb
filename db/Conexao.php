@@ -7,7 +7,7 @@ class Conexao {
     public function __construct() {
         $servername = "127.0.0.1";
         $username = "root"; // Substitua pelo seu usuário do MySQL
-        $password = ""; // Substitua pela sua senha do MySQL
+        $password = "161003"; // Substitua pela sua senha do MySQL
         $dbname = "biblioteca"; // Substitua pelo nome do seu banco de dados
 
         // Criar conexão
@@ -16,6 +16,8 @@ class Conexao {
         // Verificar conexão
         if ($this->conn->connect_error) {
             die("Conexão falhou: " . $this->conn->connect_error);
+        }else{
+            echo 'Conexão bem sucedida';
         }
     }
 
@@ -29,4 +31,6 @@ class Conexao {
         }
     }
 }
+
+new Conexao();
 ?>
