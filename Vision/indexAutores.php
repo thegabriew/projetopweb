@@ -110,8 +110,8 @@
                 <p>Cadastre de forma rápida autores, seus ID, nomes e suas nacionalidades.</p>
 
                 <form method="POST" action="">
-                    <label for="id">ID:</label>
-                    <input placeholder="ID" type="number" id="id" name="id" required min="0">
+                    <!-- <label for="id">ID:</label>
+                    <input placeholder="ID" type="number" id="id" name="id" required min="0"> -->
 
                     <label for="nome">Nome:</label>
                     <input placeholder="Nome" type="text" id="nome" name="nome" required>
